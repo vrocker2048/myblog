@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    <title>一些短篇</title>
+{% endblock %}
+{% block list %}
+    <div class=post_page>
+        <div class="post animated fadeInDown">
+            <div class="post_title post_detail_title"><h2><a href=/about/>关于</a></h2></div>
+            <div class="post_content markdown">
+                <blockquote><p>✉️ VRocker2048@gmail.com</p></blockquote>
+                <p>
+                    使用Django搭建了这个博客，还在建设中可能又会各种奇奇怪怪的bug。
+                </p>
+                <p>
+
+                </p>
+                <p>
+                    在这里会分享一些自己的学习技术经历，踩过的各种坑，以及各种乱七八糟的短篇。
+                </p>
+            </div>
+            <div class=post_footer></div>
+        </div>
+    </div>
+    <div class=pagination></div>
+{% endblock %}
+
+{% block comment %}
+    <div class=doc_comments>
+        <div class=comments_block_title>发表评论</div>
+        <div id=vcomments></div>
+    </div>
+    <link rel=stylesheet href={% static '/css/comments.css' %}>
+    <script src=//cdn1.lncld.net/static/js/3.0.4/av-min.js></script>
+    <script src=//unpkg.com/valine/dist/Valine.min.js></script>
+    <script type=text/javascript>new Valine({
+        el: '#vcomments',
+        appId: 'oSOx3qxgRhfFdS3g74FaTgYB-MdYXbMMI',
+        appKey: 'UsucesHIlGETwIhQFLYirqhN',
+        placeholder: ' ',
+        visitor: 'true',
+    })</script>
+{% endblock %}
+
+
+
+
+{% block upper %}
+    <a id=back_to_top href=# class=back_to_top style="display: block;"><span>△</span></a>
+{% endblock %}

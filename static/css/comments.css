@@ -1,0 +1,50 @@
+.doc_comments {
+  font-size: 14px;
+  color: #383838;
+  margin-top: 30px;
+  padding: 35px 0 45px;
+}
+
+.doc_comments .comments_block_title {
+  color: #000000;
+}
+
+.v .vwrap {
+  border-radius: unset;
+  margin-top: 15px;
+  border: 1px solid #f3f3f3;
+}
+
+.v .veditor {
+  min-height: 4.75rem;
+}
+
+.v .vwrap .vheader .vinput {
+  border: none;
+  background-color: #fafafa;
+  padding: 10px;
+}
+
+.v .vbtn {
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+}
+
+.v .vbtn:active,
+.v .vbtn:hover {
+  color: #ffffff;
+  border-color: #000000;
+  background-color: #303538;
+}
+
+.v code,
+.v pre {
+  background-color: #f8fafc;
+  font-family: 'Roboto Mono', Menlo, Monaco, courier,
+    'source-han-sans-simplified-c', monospace;
+}
+
+.v .vlist .vcard .vhead .vsys {
+  display: none;
+}

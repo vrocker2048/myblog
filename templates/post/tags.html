@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>一些短篇</title>
+{% endblock %}
+{% block list %}
+
+
+        <div class=page_tags>
+            <ul>
+                {% for post in blogcategory_list %}
+
+                <li><a href="{% url 'category' %}{{ post.id }}">{{ post.name }}<span class=terms_count></span></a></li>
+{#                    <li><a href="#">{{ post.category }} <span class=terms_count></span></a></li>}#}
+                {% endfor %}
+
+            </ul>
+        </div>
+        <div class=pagination></div>
+
+{% endblock %}
+<a id=back_to_top href=# class=back_to_top><span>△</span></a>

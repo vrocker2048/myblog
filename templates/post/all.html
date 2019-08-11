@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>一些短篇</title>
+{% endblock %}
+{% block list %}
+    {% for post in all_article %}
+        <div class="post animated fadeInDown">
+            <div class=post_title>
+                <h2>
+                    <a class="focus" href="/blog/{{post.id}}/" title="{{post.title}}" target="_self" >{{ post.title }}</a>
+                </h2>
+            </div>
+            <div class=list>
+                <div class="post_content markdown">
+                    <p>
+                        {{ post.content|slice:90|safe }}
+                    </p>
+                </div>
+            </div>
+            <div class=post_footer>
+                <div class=meta>
+                    <div class=info><span class=field><i class=remixicon-map-pin-time-line></i><span
+                            class=date>{{ post.pub_date }}</span></span>
+                        <span class="field tags"><i class=remixicon-stack-line></i><a
+                                href=#>{{ post.category }}</a></span></div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+{% block more %}
+    <div class=pagination><a href=/ class=pre>返回上一页</a>
+        <a href=/page/3/ class=next>阅读更多文章</a></div>
+{% endblock %}
+
